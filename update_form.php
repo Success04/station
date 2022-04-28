@@ -8,9 +8,10 @@ $result = $station->getById($_GET['id']);
 $id = $result['id'];
 $code = $result['code'];
 $stname = $result['stname'];
-$content = $result['content'];
 $category = (int)$result['category'];
-// $publish_status = (int)$result['publish_status'];
+$place = (int)$result['place'];
+$door = (int)$result['door'];
+
 ?>
 
 <!DOCTYPE html>

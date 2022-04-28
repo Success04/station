@@ -101,11 +101,11 @@ class Station extends Dbc
 		try {
 			$stmt = $dbh->prepare($sql);
 			$stmt->bindValue(':code', $stations['code'], PDO::PARAM_STR);
-			$stmt->bindValue(':name', $stations['stname'], PDO::PARAM_STR);
+			$stmt->bindValue(':stname', $stations['stname'], PDO::PARAM_STR);
 			$stmt->bindValue(':category', $stations['category'], PDO::PARAM_INT);
 			$stmt->bindValue(':place', $stations['place'], PDO::PARAM_INT);
 			$stmt->bindValue(':door', $stations['door'], PDO::PARAM_INT);
-			// $stmt->bindValue(':id', $stations['id'], PDO::PARAM_INT);
+			$stmt->bindValue(':id', $stations['id'], PDO::PARAM_INT);
 			$stmt->execute();
 			$dbh->commit();
 			echo '駅情報を更新しました';
@@ -139,10 +139,6 @@ class Station extends Dbc
 		if(empty($stations['category'])) {
 			exit('カテゴリーは必須です');
 		}
-
-		// if(empty($stations['publish_status'])) {
-		// 	exit('公開ステータスは必須です');
-		// }
 	}
 }
 
