@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>stationForm</title>
+</head>
+<body>
+	<h2>駅情報入力</h2>
+	<form action="station_create.php" method="post">
+		<p>駅コード：</p>
+		<input type="text" name="code">
+		<p>駅名：</p>
+		<input type="text" name="stname">
+		<p>駅情報：</p>
+		<p>カテゴリ：</p>
+		<select name="category">
+			<option value="1">各駅停車駅</option>
+			<option value="2">急行停車駅</option>
+			<option value="3">快急停車駅</option>
+			<option value="4">特急停車駅</option>
+		</select>
+		<br>
+		<p>場所：</p>
+		<select name="place">
+			<option value="1">1号車</option>
+			<option value="2">2号車</option>
+			<option value="3">3号車</option>
+			<option value="4">4号車</option>
+			<option value="5">5号車</option>
+			<option value="6">6号車</option>
+			<option value="7">7号車</option>
+			<option value="8">8号車</option>
+			<option value="9">9号車</option>
+			<option value="10">10号車</option>
+		</select>
+		<select name="door">
+			<option value="1">1番ドア</option>
+			<option value="2">2番ドア</option>
+			<option value="3">3番ドア</option>
+			<option value="4">4番ドア</option>
+		</select>
+		<br>
+		<input type="submit" value="送信">
+	</form>
+	<p><a href="/">戻る</a></p>
+</body>
+</html>
