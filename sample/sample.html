@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Ajaxのサンプル</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<p>名前を入力して、送信ボタンを押してください。</p>
+<p>
+	<label>名前 </lable><input type="text" name="name" id="name">
+	<input type="button" id="button1" value="送信">
+</p>
+<div id="result"></div>
+
+<script type="text/javascript">
+$(function(){
+	$('#button1').click(function(){
+		$.ajax({
+			url:'ajax_test.php',
+			type:'GET',
+			dataType:'text',
+			data: {
+				your_name:$('#name').val()
+			},
+		}).done(function(data){
+			$('#result').html(data);
+		}).fail(function(){
+			alert('通信に失敗しました。');
+		});
+	});
+});
+</script>
+</body>
+</html>

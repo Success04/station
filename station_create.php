@@ -7,5 +7,5 @@ $station->stationValidate($stations);
 $station->stationCreate($stations);
 
 ?>
-<p><a href="/">戻る</a></p>
+<p><a href="index.php">トップに戻る</a></p>
 

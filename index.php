@@ -37,5 +37,6 @@ function h($s) {
 		</tr>
 		<?php endforeach; ?>
 	</table>
+	<a href="main.php">一般画面</a>
 </body>
 </html>

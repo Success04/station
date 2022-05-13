@@ -22,6 +22,6 @@ $result = $station->getById($_GET['id']);
 	<h3>駅情報</h3>
 	<p>カテゴリ：<?php echo $station->setCategoryName($result['category']); ?></p>
 	<p>場所：<?php echo $station->setPlaceName($result['place']); ?><?php echo $station->setDoorName($result['door']); ?></p>
-	<p><a href="/">戻る</a></p>
+	<p><a href="index.php">トップに戻る</a></p>
 </body>
 </html>
